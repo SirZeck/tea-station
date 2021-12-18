@@ -106,7 +106,7 @@ p {
 
 /* scroll bar */
 body::-webkit-scrollbar {
-  width: 0.5em;
+  width: 0.5rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -115,6 +115,7 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
+  border-radius: var(--radius);
   outline: 0.5px solid slategrey;
 }
 
