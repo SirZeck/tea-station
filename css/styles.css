@@ -77,7 +77,12 @@ p {
   color: var(--clr-primary);
   background: var(--clr-primary-light);
 }
-
+.clearfix::after,
+.clearfix::before {
+  content: '';
+  clear: both;
+  display: table;
+}
 /* more global style to set */
 
 @media screen and (min-width: 800px) {
@@ -173,4 +178,44 @@ header {
     var(--clr-secondary),
     var(--clr-primary)
   );
+}
+
+/* skills section */
+.skills {
+  background: var(--clr-grey-10);
+}
+.skill {
+  padding: 2.5rem 0;
+  text-align: center;
+  transition: var(--transition);
+}
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  transition: var(--transition);
+  display: inline-block;
+  color: var(--clr-primary);
+}
+.skill-text {
+  color: var(--clr-grey-5);
+  max-width: 17rem;
+  margin: 0 auto;
+}
+.skill:hover {
+  background: var(--clr-white);
+  box-shadow: 0 2px var(--clr-primary);
+}
+.skill:hover .skill-icon {
+  transform: translateY(-5px);
+}
+@media screen and (min-width: 576px) {
+  .skill {
+    float: left;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .skill {
+    width: 25%;
+  }
 }
